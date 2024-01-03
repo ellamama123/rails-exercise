@@ -65,14 +65,14 @@ HTML inspector to determine the CSS id for the text “User was successfully cre
 **2.2**
 1. By referring to Figure 2.11, write out the analogous steps for visiting the URL /users/1/edit.
 
-Step 1: The browser issues a request for the /users/1/edit URL.
-Step 2: Rails routes /users/1/edit to the edit action in the Users controller.
-Step 3: The edit action asks the User model to retrieve the user with an id of 1 (User.find(params[:id])).
-Step 4: The User model pulls the specified user from the database.
-Step 5: The User model returns the single users to the controller.
-Step 6: The controller captures the user in the @user variable, which is passed to the edit view.
-Step 7: The view uses embedded Ruby to render the page as HTML.
-Step 8: The controller passes the HTML back to the browser.
+- Step 1: The browser issues a request for the /users/1/edit URL.
+- Step 2: Rails routes /users/1/edit to the edit action in the Users controller.
+- Step 3: The edit action asks the User model to retrieve the user with an id of 1 (User.find(params[:id])).
+- Step 4: The User model pulls the specified user from the database.
+- Step 5: The User model returns the single users to the controller.
+- Step 6: The controller captures the user in the @user variable, which is passed to the edit view.
+- Step 7: The view uses embedded Ruby to render the page as HTML.
+- Step 8: The controller passes the HTML back to the browser.
 
 2. Find the line in the scaffolding code that retrieves the user from the database in the previous exercise. Hint: It’s in a special location called set_user.
 
