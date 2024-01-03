@@ -1,0 +1,14 @@
+Exercises
+1. (For readers who know CSS) Create a new user, then use your browser’s
+HTML inspector to determine the CSS id for the text “User was successfully created.” What happens when you refresh your browser?
+- There is no CSS ID for the text 'User was successfully created.'. When you refresh the browser, the text goes away.
+
+2. What happens if you try to create a user with a name but no email address?
+- When you try to create a user with a name but no email address, the creation of the user is successful, with no email address being set for the user.
+
+3. What happens if you try create a user with an invalid email address, like
+“@example.com”?
+- When you try create a user with an invalid email address, the user is successfully created with the invalid email address populating the email field of the user.
+
+4. Destroy each of the users created in the previous exercises. Does Rails display a message by default when a user is destroyed?
+- By default, Rails displays "User was successfully destroyed." when a user is destroyed.
