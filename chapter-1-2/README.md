@@ -225,7 +225,7 @@ previous exercise?
 puts "racecar".length
 7
 => nil
-```bash
+```
 
 2. Confirm using the reverse method that the string in the previous exercise is the same when its letters are reversed.
 
