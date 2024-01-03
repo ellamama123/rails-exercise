@@ -1,6 +1,6 @@
 Exercises
 
-** 1.2 ** 
+**1.2**
 
 1. According to the default Rails page, what is the version of Ruby on your
 system? Confirm by running ruby -v at the command line
@@ -11,11 +11,11 @@ system? Confirm by running ruby -v at the command line
 
 - The version of Rails on my system is Rails 7.1.2
 
-** 1.3 ** 
+**1.3**
 
 1. Change the content of the hello action in Listing 1.9 to read “hola, mundo!” instead of “hello, world!”.
 
-```
+```bash
 render html: "hola, mundo!"
 ```
 
@@ -24,30 +24,30 @@ exclamation point, as in “¡Hola, mundo!” (Figure 1.18).14 To get a ¡
 character on a Mac, you can use Option-1; otherwise, you can always
 copy-and-paste the character into your editor.
 
-```
+```bash
 render html: "¡Hola, mundo!"
 ```
 3. By following the example of the hello action in Listing 1.9, add a second action called goodbye that renders the text “goodbye, world!”. Edit
 the routes file from Listing 1.11 so that the root route goes to goodbye
 instead of to hello (Figure 1.19).
 
-```
+```bash
 render html: "goodbye, world"
 ```
 
 router.rb
-```
+```bash
 application#goodbye
 ```
 
-** 1.4 **
+**1.4**
 Cant deploy to Heroku
 
-** 1.5 **
+**1.5**
 Cant deploy to Heroku
 
 
-** 2.1 **
+**2.1**
 1. (For readers who know CSS) Create a new user, then use your browser’s
 HTML inspector to determine the CSS id for the text “User was successfully created.” What happens when you refresh your browser?
 - There is no CSS ID for the text 'User was successfully created.'. When you refresh the browser, the text goes away.
@@ -62,7 +62,7 @@ HTML inspector to determine the CSS id for the text “User was successfully cre
 4. Destroy each of the users created in the previous exercises. Does Rails display a message by default when a user is destroyed?
 - Rails displays "User was successfully destroyed." when a user is destroyed.
 
-** 2.2 **
+**2.2**
 1. By referring to Figure 2.11, write out the analogous steps for visiting the URL /users/1/edit.
 
 Step 1: The browser issues a request for the /users/1/edit URL.
@@ -82,7 +82,7 @@ Step 8: The controller passes the HTML back to the browser.
 
 - edit.html.erb
 
-** 2.3 **
+**2.3**
 1. (For readers who know CSS) Create a new micropost, then use your browser’s HTML inspector to determine the CSS id for the text“Micropost was successfully created.” What happens when you refresh you browser?
 
 - There is no CSS ID for the text 'Micropost was successfully created.'. When you refresh the browser, the text goes away.
@@ -101,7 +101,7 @@ first paragraph from the Wikipedia article on Ruby).
 
 - Successfully destroy a micropost.
 
-** 2.4 **
+**2.4**
 
 1. Try to create a micropost with the same long content used in a previous exercise (Section 2.3.1). How has the behavior changed?
 
@@ -113,7 +113,7 @@ first paragraph from the Wikipedia article on Ruby).
 - There is no CSS ID for error message.
 ![My animated logo](image_ex/ex1.1.5.png)
 
-** 2.5 **
+**2.5**
 
 1. Edit the user show page to display the content of the user’s first micropost.
 (Use your technical sophistication (Box 1.2) to guess the syntax based on
@@ -141,7 +141,7 @@ class User < ApplicationRecord
 end
 ```
 
-** 2.6 **
+**2.6**
 1. By examining the contents of the Application controller file, find the
 line that causes ApplicationController to inherit from ActionController::Base.
 
@@ -162,13 +162,13 @@ class ApplicationRecord < ActiveRecord::Base
 end
 ```
 
-** 2.7 **
+**2.7**
 Cant deploy now
 
-** 3.1. **
+**3.1.**
 Can't deploy now
 
-** 3.2. **
+**3.2.**
 1. Generate a controller called Foo with actions bar and baz.
 
 ```
@@ -181,7 +181,7 @@ $ rails g controller FooController bar baz
 $ rails d controller FooController bar baz
 ```
 
-** 3.3. **
+**3.3.**
 1.Make a Contact page for the sample app.15 Following the model in Listing 3.16, first write a test for the existence of a page at the URL /static_pages/contact by testing for the title “Contact | Ruby on Rails Tutorial
 Sample App”. Get your test to pass by following the same steps as when
 making the About page in Section 3.3.3, including filling the Contact
@@ -189,7 +189,7 @@ page with the content from Listing 3.41.
 
 - Code on folder /app/views/static_pages/contact.html.erb
 
-** 4.2. **
+**4.2.**
 1. Assign variables city and state to your current city and state of residence. (If residing outside the U.S., substitute the analogous quantities.)
 
 ```
@@ -217,7 +217,7 @@ previous exercise?
 
 - The result is '#{city}\t#{state}'
 
-** 4.3. **
+**4.3.**
 
 1. What is the length of the string “racecar”?
 
@@ -256,7 +256,7 @@ Use up-arrow to retrieve and edit previous commands
 ```
 
 
-** 4.4. **
+**4.4.**
 
 1. By replacing FILL_IN with the appropriate comparison test shown in
 Listing 4.10, define a method for testing palindromes. Hint: Use the
@@ -294,7 +294,7 @@ prints its responses instead of returning them.
 => true
 ```
 
-** 4.5. **
+**4.5.**
 
 1. Assign a to be to the result of splitting the string “A man, a plan, a canal,
 Panama” on comma-space.
@@ -335,7 +335,7 @@ Panama” on comma-space.
 => "s"
 ```
 
-** 4.6. **
+**4.6.**
 
 1. Using the range 0..16, print out the first 17 powers of 2.
 
@@ -393,7 +393,7 @@ shuffles the letters in a given string.
 => string_shuffle("foobar")
 ```
 
-** 4.7. **
+**4.7.**
 
 1. Define a hash with the keys 'one', 'two', and 'three', and the values 'uno', 'dos', and 'tres'. Iterate over the hash, and for each key/value pair print out "'#{key}' in Spanish is '#{value}'".
 
