@@ -119,7 +119,7 @@ first paragraph from the Wikipedia article on Ruby).
 (Use your technical sophistication (Box 1.2) to guess the syntax based on
 the other content in the file.) Confirm by visiting /users/1 that it worked.
 
-```
+```bash
 <p>First Micropost</p>
 <%= @user.microposts.first.content %>
 ```
@@ -133,7 +133,7 @@ Verify that you get the behavior shown in Figure 2.17.
 3. Update Listing 2.19 by replacing FILL_IN with the appropriate code to
 validate the presence of name and email attributes in the User model (Figure 2.18).
 
-```
+```bash
 class User < ApplicationRecord
   has_many :microposts
   validates :name, presence: true
@@ -145,7 +145,7 @@ end
 1. By examining the contents of the Application controller file, find the
 line that causes ApplicationController to inherit from ActionController::Base.
 
-```
+```bash
     class ApplicationController < ActionController::Base.
 ```
 
@@ -156,7 +156,7 @@ directory.
 
 In app/models/application_record.rb:
 
-```
+```bash
 class ApplicationRecord < ActiveRecord::Base
   primary_abstract_class
 end
@@ -171,13 +171,13 @@ Can't deploy now
 **3.2.**
 1. Generate a controller called Foo with actions bar and baz.
 
-```
+```bash
 $ rails g controller FooController bar baz
 ```
 
 2. By applying the techniques described in Box 3.1, destroy the Foo controller and its associated actions.
 
-```
+```bash
 $ rails d controller FooController bar baz
 ```
 
@@ -192,7 +192,7 @@ page with the content from Listing 3.41.
 **4.2.**
 1. Assign variables city and state to your current city and state of residence. (If residing outside the U.S., substitute the analogous quantities.)
 
-```
+```bash
 >> city = 'Bac Ninh'
 => "Bac Ninh"
 >> state = "Ha Noi"
@@ -202,14 +202,14 @@ page with the content from Listing 3.41.
 2. Using interpolation, print (using puts) a string consisting of the city and
 state separated by a comma and a space, as in “Los Angeles, CA”.
 
-```
+```bash
 puts "#{city}, #{state}"
 ```
 
 3. Repeat the previous exercise but with the city and state separated by a tab
 character.
 
-```
+```bash
 puts "#{city}\t#{state}"
 ```
 4. What is the result if you replace double quotes with single quotes in the
@@ -221,15 +221,15 @@ previous exercise?
 
 1. What is the length of the string “racecar”?
 
-```
+```bash
 puts "racecar".length
 7
 => nil
-```
+```bash
 
 2. Confirm using the reverse method that the string in the previous exercise is the same when its letters are reversed.
 
-```
+```bash
 puts "racecar".reverse
 racecar
 => nil
@@ -237,7 +237,7 @@ racecar
 
 3. Assign the string “racecar” to the variable s. Confirm using the comparison operator == that s and s.reverse are equal.
 
-```
+```bash
 >> s = "racecar"
 => "racecar"
 >> s == s.reverse
@@ -248,7 +248,7 @@ racecar
 change if you reassign the variable s to the string “onomatopoeia”? Hint:
 Use up-arrow to retrieve and edit previous commands
 
-```
+```bash
 >> s = "onomatopoeia"            
 => "onomatopoeia"
 >> s == s.reverse    
@@ -262,7 +262,7 @@ Use up-arrow to retrieve and edit previous commands
 Listing 4.10, define a method for testing palindromes. Hint: Use the
 comparison shown in Listing 4.9.
 
-```
+```bash
 def palindrome_tester(s)
  if s == s.reverse
     puts "It's a palindrome!"
@@ -275,7 +275,7 @@ end
 2. By running your palindrome tester on “racecar” and “onomatopoeia”,
 confirm that the first is a palindrome and the second isn’t.
 
-```
+```bash
 >> palindrome_tester("racecar")
 It's a palindrome!
 => nil
@@ -289,7 +289,7 @@ confirm that its return value is nil (i.e., calling nil? on the result of the
 method should return true). This is because the code in Listing 4.10
 prints its responses instead of returning them.
 
-```
+```bash
 >> palindrome_tester("racecar").nil?
 => true
 ```
@@ -299,7 +299,7 @@ prints its responses instead of returning them.
 1. Assign a to be to the result of splitting the string “A man, a plan, a canal,
 Panama” on comma-space.
 
-```
+```bash
 >> a = "A man, a plan, a canal, Panama"
 => "A man, a plan, a canal, Panama"
 >> a = a.split(', ')
@@ -308,14 +308,14 @@ Panama” on comma-space.
 
 2. Assign s to the string resulting from joining a on nothing.
 
-```
+```bash
 >> a.join()
 => "A mana plana canalPanama"
 ```
 
 3. Split s on whitespace and rejoin on nothing. Use the palindrome test from Listing 4.10 to confirm that the resulting string s is not a palindrome by the current definition. Using the downcase method, show that s.downcase is a palindrome.
 
-```
+```bash
 >> s = a.join
 => "A mana plana canalPanama"
 >> s = s.split.join
@@ -328,7 +328,7 @@ Panama” on comma-space.
 
 4. What is the result of selecting element 7 from the range of letters a through z? What about the same range reversed? Hint: both cases you will have to convert the range to an array.
 
-```
+```bash
 >> ('a'..'z').to_a[7]        
 => "h"
 >> ('a'..'z').to_a.reverse[7]
@@ -339,7 +339,7 @@ Panama” on comma-space.
 
 1. Using the range 0..16, print out the first 17 powers of 2.
 
-```
+```bash
 >> (0..16).each do |num|
 >>   puts  num*num
 >>   puts  '--'
@@ -360,7 +360,7 @@ Panama” on comma-space.
 2. Define a method called yeller that takes in an array of characters and
 returns a string with an ALLCAPS version of the input. Verify that yeller(['o', 'l', 'd']) returns "OLD". Hint: Combine map, upcase, and join.
 
-```
+```bash
 >> def yeller(char_arr)
 >>   char_arr.map(&:upcase).join
 >> end
@@ -372,7 +372,7 @@ returns a string with an ALLCAPS version of the input. Verify that yeller(['o', 
 3. Define a method called random_subdomain that returns a randomly
 generated string of eight letters.
 
-```
+```bash
 >> def random_subdomain
 >>   ('a'..'z').to_a.sample(8).join
 >> end
@@ -385,7 +385,7 @@ generated string of eight letters.
 methods, combine split, shuffle, and join to write a function that
 shuffles the letters in a given string.
 
-```
+```bash
 >> def string_shuffle(s)
 >>  s.split('').shuffle.join
 >> end
@@ -397,7 +397,7 @@ shuffles the letters in a given string.
 
 1. Define a hash with the keys 'one', 'two', and 'three', and the values 'uno', 'dos', and 'tres'. Iterate over the hash, and for each key/value pair print out "'#{key}' in Spanish is '#{value}'".
 
-```
+```bash
 >> hash.each do |key,value|
 >>  puts "#{key} in Spanish is #{value}"
 >> end
@@ -409,7 +409,7 @@ three in Spanish is tres
 2. Create three hashes called person1, person2, and person3, with first and last names under the keys :first and :last. Then create a params hash so that params[:father] is person1, params[:mother] is person2, and params[:child] is person3.
 Verify that, for example, params[:father][:first] has the right value.
 
-```
+```bash
 >> person1 = {"first_name": "Chien", "last_name": "Nguyen Dinh"}
 => {:first_name=>"Chien", :last_name=>"Nguyen Dinh"}
 >> person2 = {"first_name": "Chien", "last_name": "ND"}
@@ -428,14 +428,14 @@ Verify that, for example, params[:father][:first] has the right value.
 “password digest”, and values equal to your name, your email address,
 and a random string of 16 lower-case letters.
 
-```
+```bash
 >> user_data = { name: "Your Name", email:"your.email@example.com", password_digest: SecureRandom.hex(8) }
 => {:name=>"Your Name", :email=>"your.email@example.com", :password_digest=>"58332c0fe14d04e1"}
 ```
 
 4. Find an online version of the Ruby API and read about the Hash method merge. What is the value of the following expression?
 
-```
+```bash
 >> { "a" => 100, "b" => 200 }.merge({ "b" => 300 })
 => {"a"=>100, "b"=>300}
 ```
